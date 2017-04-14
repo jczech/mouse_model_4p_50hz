@@ -1,0 +1,5 @@
+channel_release_AZ_COL_ROW RELEASE_SITE
+{
+MOLECULE = closed_channel_AZ_COL_ROW
+LOCATION = [x,y,z]
+}
