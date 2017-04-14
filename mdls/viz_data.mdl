@@ -1,16 +1,8 @@
 VIZ_OUTPUT { /*Define the visualization data output block*/
-	MODE = CELLBLENDER
-        FILENAME = "./cellblender_bin_3/blendermodel"
-	MOLECULES{ 		   
-		NAME_LIST {"ca*" "bound_sensor*" "*channel*"}  
-		ITERATION_NUMBERS { ALL_DATA @ [[0 TO 300000 STEP 1000]] }
-		}
-
-	/*
-	MESHES
-	{
-		NAME_LIST {ALL_MESHES}
-		ITERATION_NUMBERS {ALL_DATA @ [0]}
-	}*/
+  MODE = CELLBLENDER
+  FILENAME = "./cellblender_bin_3/blendermodel"
+  MOLECULES{
+    NAME_LIST {"ca*" "bound_sensor*" "*channel*"}  
+    ITERATION_NUMBERS { ALL_DATA @ [[0 TO 300000 STEP 1000]] }
+  }
 }
-

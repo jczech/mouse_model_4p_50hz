@@ -4,13 +4,13 @@ INCLUDE_FILE="parameters.mdl"  /*read parameters for the simulation*/
 
 NOTIFICATIONS
 {
-DIFFUSION_CONSTANT_REPORT=OFF
-ITERATION_REPORT=OFF
-PROBABILITY_REPORT=OFF
-VARYING_PROBABILITY_REPORT=OFF
-PROGRESS_REPORT=OFF
-RELEASE_EVENT_REPORT=OFF
-FINAL_SUMMARY=OFF
+  DIFFUSION_CONSTANT_REPORT=OFF
+  ITERATION_REPORT=OFF
+  PROBABILITY_REPORT=OFF
+  VARYING_PROBABILITY_REPORT=OFF
+  PROGRESS_REPORT=OFF
+  RELEASE_EVENT_REPORT=OFF
+  FINAL_SUMMARY=OFF
 }
 
 ITERATIONS=iterations
@@ -32,7 +32,7 @@ INCLUDE_FILE="surface_classes.mdl"
 /*object template files*/
 
 INCLUDE_FILE="ca_binding_site_template.mdl"
-INCLUDE_FILE = "ca_Y_binding_site_template.mdl"
+INCLUDE_FILE="ca_Y_binding_site_template.mdl"
 INCLUDE_FILE="vesicle_template.mdl"
 INCLUDE_FILE="subvesicular_sampling_box_template.mdl"
 
@@ -47,11 +47,11 @@ INCLUDE_FILE="volume_buffer.mdl"
 /*create instances of the subjects in the simulation*/
 
 INSTANTIATE presynaptic_segment OBJECT {
-endcaps OBJECT endcaps {}
-main_membrane OBJECT main_membrane {}
-vesicles OBJECT vesicles {}
-buffer OBJECT buffer {}
-channel_release_site OBJECT channel_release_site {}
+  endcaps OBJECT endcaps {}
+  main_membrane OBJECT main_membrane {}
+  vesicles OBJECT vesicles {}
+  buffer OBJECT buffer {}
+  channel_release_site OBJECT channel_release_site {}
 }
 
 /*visual and reaction data output*/

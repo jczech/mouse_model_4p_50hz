@@ -1,53 +1,47 @@
 buffer OBJECT {
+  buffer_box POLYGON_LIST {
+    VERTEX_LIST {
+      [1.0380673408508301, 0.85020595788955688, -0.26976394653320312]
+      [1.0380673408508301, -0.80110931396484375, -0.26976394653320312]
+      [-1.0488412380218506, -0.8011091947555542, -0.26976394653320312]
+      [-1.0488407611846924, 0.85020631551742554, -0.26976394653320312]
+      [1.0380678176879883, 0.85020560026168823, 0.76366508007049561]
+      [1.0380666255950928, -0.80110979080200195, 0.76366508007049561]
+      [-1.0488414764404297, -0.80110901594161987, 0.76366508007049561]
+      [-1.0488409996032715, 0.85020601749420166, 0.76366508007049561]
+    }
 
-buffer_box POLYGON_LIST {
-	VERTEX_LIST {
-		[1.0380673408508301, 0.85020595788955688, -0.26976394653320312]
-		[1.0380673408508301, -0.80110931396484375, -0.26976394653320312]
-		[-1.0488412380218506, -0.8011091947555542, -0.26976394653320312]
-		[-1.0488407611846924, 0.85020631551742554, -0.26976394653320312]
-		[1.0380678176879883, 0.85020560026168823, 0.76366508007049561]
-		[1.0380666255950928, -0.80110979080200195, 0.76366508007049561]
-		[-1.0488414764404297, -0.80110901594161987, 0.76366508007049561]
-		[-1.0488409996032715, 0.85020601749420166, 0.76366508007049561]
-	}
+    ELEMENT_CONNECTIONS {
+      [4, 0, 3]
+      [4, 3, 7]
+      [2, 6, 7]
+      [2, 7, 3]
+      [1, 5, 2]
+      [5, 6, 2]
+      [0, 4, 1]
+      [4, 5, 1]
+      [4, 7, 5]
+      [7, 6, 5]
+      [0, 1, 2]
+      [0, 2, 3]
+    }
 
-	ELEMENT_CONNECTIONS {
-		[4, 0, 3]
-		[4, 3, 7]
-		[2, 6, 7]
-		[2, 7, 3]
-		[1, 5, 2]
-		[5, 6, 2]
-		[0, 4, 1]
-		[4, 5, 1]
-		[4, 7, 5]
-		[7, 6, 5]
-		[0, 1, 2]
-		[0, 2, 3]
-	}
+    DEFINE_SURFACE_REGIONS {
+       whole_mesh {
+        ELEMENT_LIST = [ALL_ELEMENTS]
+      }
+    }
+  }
 
-	DEFINE_SURFACE_REGIONS {
-		 whole_mesh {
-			ELEMENT_LIST = [ALL_ELEMENTS]
-		}
-	}
+  release1 RELEASE_SITE {
+    SHAPE=buffer.buffer_box[whole_mesh]
+    MOLECULE=unbound_mobile_buffer
+    CONCENTRATION=mobile_buffer_concentration
+  }
+
+  release2 RELEASE_SITE {
+     SHAPE=buffer.buffer_box[whole_mesh]
+     MOLECULE=unbound_fixed_buffer
+     CONCENTRATION=fixed_buffer_concentration
+  }
 }
-
-release1 RELEASE_SITE {
-	SHAPE=buffer.buffer_box[whole_mesh]
-	MOLECULE=unbound_mobile_buffer
-	CONCENTRATION=mobile_buffer_concentration
-}
-
-release2 RELEASE_SITE {
-	 SHAPE=buffer.buffer_box[whole_mesh]
-	 MOLECULE=unbound_fixed_buffer
-	 CONCENTRATION=fixed_buffer_concentration
-}
-
-
-}
-
-
-
