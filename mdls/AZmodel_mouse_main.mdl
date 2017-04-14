@@ -62,7 +62,7 @@ INCLUDE_FILE="local_directory.mdl" /*file written by control script that defines
 
 /*for default conditions, rewrite local_directory.mdl to state locladir=/react_data */
 
-INCLUDE_FILE="viz_data.mdl"
+/*INCLUDE_FILE="viz_data.mdl"*/
 INCLUDE_FILE="reaction_data.mdl"
 
 /*end of the file*/
